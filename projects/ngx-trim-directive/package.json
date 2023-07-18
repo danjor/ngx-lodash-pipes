@@ -18,6 +18,9 @@
     "input",
     "blur"
   ],
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
   "peerDependencies": {
     "@angular/common": ">= 5.0.0",
     "@angular/core": ">= 5.0.0"
