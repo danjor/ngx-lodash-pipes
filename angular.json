@@ -10,13 +10,14 @@
       "prefix": "app",
       "schematics": {
         "@schematics/angular:component": {
-          "styleext": "scss"
+          "style": "scss"
         }
       },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist/packages",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -33,6 +34,12 @@
           },
           "configurations": {
             "production": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -136,7 +143,8 @@
           "configurations": {
             "production": {
               "project": "projects/ngx-trim-directive/ng-package.prod.json"
-            }
+            ,              "tsConfig": "projects/ngx-trim-directive/tsconfig.lib.prod.json"
+}
           }
         },
         "test": {
@@ -176,7 +184,8 @@
           "configurations": {
             "production": {
               "project": "projects/ngx-cleave-directive/ng-package.prod.json"
-            }
+            ,              "tsConfig": "projects/ngx-cleave-directive/tsconfig.lib.prod.json"
+}
           }
         },
         "test": {
@@ -216,7 +225,8 @@
           "configurations": {
             "production": {
               "project": "projects/ngx-lower-case-directive/ng-package.prod.json"
-            }
+            ,              "tsConfig": "projects/ngx-lower-case-directive/tsconfig.lib.prod.json"
+}
           }
         },
         "test": {
@@ -256,7 +266,8 @@
           "configurations": {
             "production": {
               "project": "projects/ngx-upper-case-directive/ng-package.prod.json"
-            }
+            ,              "tsConfig": "projects/ngx-upper-case-directive/tsconfig.lib.prod.json"
+}
           }
         },
         "test": {
@@ -296,7 +307,8 @@
           "configurations": {
             "production": {
               "project": "projects/ngx-lodash-pipes/ng-package.prod.json"
-            }
+            ,              "tsConfig": "projects/ngx-lodash-pipes/tsconfig.lib.prod.json"
+}
           }
         },
         "test": {
@@ -336,7 +348,8 @@
           "configurations": {
             "production": {
               "project": "projects/ngx-let-directive/ng-package.prod.json"
-            }
+            ,              "tsConfig": "projects/ngx-let-directive/tsconfig.lib.prod.json"
+}
           }
         },
         "lint": {
