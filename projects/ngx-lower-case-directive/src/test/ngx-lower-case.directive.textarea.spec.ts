@@ -4,8 +4,8 @@ import {
   ViewChild,
 } from '@angular/core';
 import {
-  FormControl,
-  FormGroup,
+  UntypedFormControl,
+  UntypedFormGroup,
   FormsModule,
   ReactiveFormsModule,
 } from '@angular/forms';
@@ -35,14 +35,14 @@ class TestComponent {
   @ViewChild('input3') input3: ElementRef;
   @ViewChild('input4') input4: ElementRef;
 
-  readonly fieldA = new FormControl('');
-  readonly formA = new FormGroup({
+  readonly fieldA = new UntypedFormControl('');
+  readonly formA = new UntypedFormGroup({
     fieldA: this.fieldA,
   });
 
-  readonly fieldB = new FormControl('');
-  readonly fieldC = new FormControl('');
-  readonly formB = new FormGroup({
+  readonly fieldB = new UntypedFormControl('');
+  readonly fieldC = new UntypedFormControl('');
+  readonly formB = new UntypedFormGroup({
     fieldB: this.fieldB,
     fieldC: this.fieldC,
   }, {

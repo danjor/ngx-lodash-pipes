@@ -3,8 +3,8 @@ import {
   OnInit,
 } from '@angular/core';
 import {
-  FormControl,
-  FormGroup,
+  UntypedFormControl,
+  UntypedFormGroup,
   Validators,
 } from '@angular/forms';
 
@@ -18,10 +18,10 @@ export class LowerCaseSampleComponent implements OnInit {
   constructor () {
   }
 
-  readonly fieldA = new FormControl('', Validators.required);
-  readonly fieldB = new FormControl('');
+  readonly fieldA = new UntypedFormControl('', Validators.required);
+  readonly fieldB = new UntypedFormControl('');
 
-  readonly formA = new FormGroup({
+  readonly formA = new UntypedFormGroup({
     fieldA: this.fieldA,
     fieldB: this.fieldB,
   });

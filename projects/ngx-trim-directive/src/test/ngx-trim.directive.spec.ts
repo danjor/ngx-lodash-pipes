@@ -4,8 +4,8 @@ import {
   ViewChild,
 } from '@angular/core';
 import {
-  FormControl,
-  FormGroup,
+  UntypedFormControl,
+  UntypedFormGroup,
   FormsModule,
   ReactiveFormsModule,
 } from '@angular/forms';
@@ -56,14 +56,14 @@ class TestComponent {
   trimOption: '' | 'blur' | false = '';
   trimOnWriteValue = true;
 
-  readonly fieldA = new FormControl('ngxTrimDirective   ');
-  readonly formA = new FormGroup({
+  readonly fieldA = new UntypedFormControl('ngxTrimDirective   ');
+  readonly formA = new UntypedFormGroup({
     fieldA: this.fieldA,
   });
 
-  readonly fieldB = new FormControl('   ');
-  readonly fieldC = new FormControl('');
-  readonly formB = new FormGroup({
+  readonly fieldB = new UntypedFormControl('   ');
+  readonly fieldC = new UntypedFormControl('');
+  readonly formB = new UntypedFormGroup({
     fieldB: this.fieldB,
     fieldC: this.fieldC,
   }, {

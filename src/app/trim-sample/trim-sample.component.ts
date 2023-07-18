@@ -3,8 +3,8 @@ import {
   OnInit,
 } from '@angular/core';
 import {
-  FormControl,
-  FormGroup,
+  UntypedFormControl,
+  UntypedFormGroup,
   Validators,
 } from '@angular/forms';
 
@@ -18,11 +18,11 @@ export class TrimSampleComponent implements OnInit {
   constructor () {
   }
 
-  readonly fieldA = new FormControl('', Validators.required);
-  readonly fieldB = new FormControl('');
-  readonly fieldC = new FormControl('');
+  readonly fieldA = new UntypedFormControl('', Validators.required);
+  readonly fieldB = new UntypedFormControl('');
+  readonly fieldC = new UntypedFormControl('');
 
-  readonly formA = new FormGroup({
+  readonly formA = new UntypedFormGroup({
     fieldA: this.fieldA,
     fieldB: this.fieldB,
     fieldC: this.fieldC,

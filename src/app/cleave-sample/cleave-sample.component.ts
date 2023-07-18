@@ -3,8 +3,8 @@ import {
   OnInit,
 } from '@angular/core';
 import {
-  FormControl,
-  FormGroup,
+  UntypedFormControl,
+  UntypedFormGroup,
   Validators,
 } from '@angular/forms';
 
@@ -22,10 +22,10 @@ export class CleaveSampleComponent implements OnInit {
 
   value = '123412345123456';
 
-  readonly fieldA = new FormControl('02588662222', Validators.required);
-  readonly fieldB = new FormControl('4621082500002429');
+  readonly fieldA = new UntypedFormControl('02588662222', Validators.required);
+  readonly fieldB = new UntypedFormControl('4621082500002429');
 
-  readonly formA = new FormGroup({
+  readonly formA = new UntypedFormGroup({
     fieldA: this.fieldA,
     fieldB: this.fieldB,
   });
