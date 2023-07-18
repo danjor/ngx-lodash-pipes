@@ -6,8 +6,8 @@ import 'core-js/es/string';
 import 'core-js/es/array';
 
 import 'core-js/es/reflect';
-import 'zone.js/dist/zone';
-import 'zone.js/dist/zone-testing';
+import 'zone.js';
+import 'zone.js/testing';
 import { getTestBed } from '@angular/core/testing';
 import {
   BrowserDynamicTestingModule,
