@@ -76,5 +76,9 @@
     "hooks": {
       "pre-push": "protractor e2e/protractor.conf.js"
     }
+  },
+  "volta": {
+    "node": "16.14.2",
+    "yarn": "1.22.17"
   }
 }
